@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SchoolTracker
 {
@@ -6,14 +7,72 @@ namespace SchoolTracker
     {
         static void Main(string[] args)
         {
-            var studentsGrades = new int[] { 80, 77, 87, 87, 65, 98, 70, 55, 92, 83, 39 };
 
-            foreach (var student in studentsGrades)
+            var students = new List<Student>();
+            
+            var adding = true;
+
+            while(adding)
             {
-                Console.WriteLine(student);
+                var newStudent = new Student();
+
+                Console.WriteLine("Student Name: ");
+                newStudent.Name = Console.ReadLine();
+
+                Console.WriteLine("Student Grade: ");
+                newStudent.Grade = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Student Birthday: ");
+                newStudent.Birthday = Console.ReadLine();
+
+                Console.WriteLine("Student Phone: ");
+                newStudent.SetPhone(int.Parse(Console.ReadLine()));
+
+                Console.WriteLine("Student Grade: ");
+                newStudent.Address = Console.ReadLine();
+
+
+                students.Add(newStudent);
+                Student.Count++;
+                Console.WriteLine("Student Count: {0}", Student.Count);
+
+                Console.WriteLine("Add another? y/n");
+
+                if (Console.ReadLine() != "y")
+                    adding = false;
+
+            }
+
+
+
+            foreach (var student in students)
+            {
+
+                Console.WriteLine($"Name: {student.Name}, Grade: {student.Grade}");
             }
             
 
+        }
+    }
+
+    class Student
+    {
+        static public int Count = 0;
+
+        public string Name;
+        public int Grade;
+        public string Birthday;
+        public string Address;
+        private int phone;
+
+        public int Phone
+        {
+            set { phone = value; }
+        }
+
+        public void SetPhone(int number)
+        {
+            phone = number;
         }
     }
 }

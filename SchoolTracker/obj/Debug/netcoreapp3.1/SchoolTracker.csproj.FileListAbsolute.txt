@@ -10,3 +10,4 @@ C:\Users\dalyk\source\repos\SchoolTracker\SchoolTracker\obj\Debug\netcoreapp3.1\
 C:\Users\dalyk\source\repos\SchoolTracker\SchoolTracker\obj\Debug\netcoreapp3.1\SchoolTracker.dll
 C:\Users\dalyk\source\repos\SchoolTracker\SchoolTracker\obj\Debug\netcoreapp3.1\SchoolTracker.pdb
 C:\Users\dalyk\source\repos\SchoolTracker\SchoolTracker\obj\Debug\netcoreapp3.1\SchoolTracker.genruntimeconfig.cache
+C:\Users\dalyk\source\repos\SchoolTracker\SchoolTracker\obj\Debug\netcoreapp3.1\SchoolTracker.csprojAssemblyReference.cache
